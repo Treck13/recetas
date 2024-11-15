@@ -1,0 +1,24 @@
+
+<!--En este apartado se guardan los datos y 
+    segidamente de unos enlaces para poder editar o eliminar -->
+<ul>
+    {% for receta in recetas %}
+        <li>{{receta.receta}} - {{receta.chef}} - {{receta.comida}}</li>
+    {% endfor %}
+
+</ul>
+<table>
+    <th>
+        <th>Lista</th>
+        <th>Acciones</th>
+    </th>
+    {% for receta in recetas %}
+        <tr>
+            <td>{{receta.receta}}</td>
+            <td>
+                <a href="{% url  'actualizar_receta.html' lista.id %}"> Editar</a>
+                <a href="{% url  'eliminar_receta.html' lista.id %}">Eliminar</a>
+            </td>
+        </tr>
+    {% endfor %}
+</table>

@@ -1,0 +1,17 @@
+<!--En este apartado se agregan los datos para luego guardarlos-->
+
+<form method="POST">
+    {% csrf_token %}
+    <label for="receta">Receta:</label>
+    <input type="text" id="receta" name="receta" ><br></br>
+
+    <label for="chef">Chef:</label>
+    <input type="text" id="chef" name="chef" ><br></br>
+
+    <label for="comida">Comida:</label>
+    <textarea name="comida" id="comida" required></textarea>
+
+    <button type="submit">Crear receta</button>
+
+
+</form>

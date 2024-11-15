@@ -1,0 +1,7 @@
+<!--En este apartado se eliminan los datos que quiera eliminar-->
+
+<h2>¿Deseas eliminar la receta"{{receta.receta}}"?</h2>
+<form method="POST">
+    {% csrf_token %}
+    <button type="submit">Eliminar</button>
+</form>

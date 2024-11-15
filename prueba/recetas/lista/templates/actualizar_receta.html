@@ -1,0 +1,9 @@
+<!--En este apartado se interactua con la base de datos para poder editarla-->
+<form method="POST">
+    {% csrf_token %}
+    <input type="text" name="receta" value="{{receta.receta}}">
+    <input type="text" name="chef" value="{{receta.chef}}">
+    <textarea name="comida">{{lista.comida}}</textarea>
+    <button type="submit">Actualizar</button>
+
+</form>
